@@ -36,45 +36,69 @@ class Gender extends Enum
 }
 ```
 
+Minimum requirement is to define the static variable, $choices.
+To use some shortcut method, define constant.
+
+
 ### how to use it.
 
-create a enum variable by constructing the enum class. and then, ...
+Constructing an enum value object.
 
 ```php
 $someOneGender = new Gender( Gender::FEMALE );
+```
 
+To get the value,
+
+```php
 // getting the value set
 echo (string) $someOneGender;   // 'F'
 echo $someOneGender->get();     // 'F'
 echo $someOneGender->show();    // 'Female'
+```
 
+To check the value, use ```is``` method.
+
+```php
 // checking the value
 echo $someOneGender->is( Gender::MALE );   // false;
 echo $someOneGender->is( Gender::FEMALE ); // true;
 echo $someOneGender->isMale();             // false;
 echo $someOneGender->isFemale();           // true;
+```
+
+Static methods to get information about the enum class.
+
+```php
+// does this exist?
+echo $someOneGender::exists( 'X' );        // false;
 
 // getting the list of possible values
-echo $someOneGender::exists( 'X' );        // false;
 $list = Gender::getValues(); // [ 'M', 'F' ]
 $list = Gender::getChoices();   // [ 'M' => 'Male', 'F' => 'Female' ]
 ```
 
 that's it.
 
-### some more feature.
+### identification of object
 
-probably this is not necessary. or even somewhat dangerous.
+This is not implemented.
 
 ```php
 $someOneGender = new Gender( Gender::FEMALE );
 $someOneElseGender = new Gender( Gender::FEMALE );
 $someOneGender ==  $someOneElseGender; // true.
-$someOneGender === $someOneElseGender; // true !?
+$someOneGender === $someOneElseGender; // false.
 ```
+
+
 
 EnumList Wishing Code
 ---------------------
+
+This is an idea for array of enum values.
+i.e. not implemented yet.
+
 
 ```php
 class Choices extends EnumList
