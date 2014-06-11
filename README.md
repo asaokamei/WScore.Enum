@@ -24,6 +24,13 @@ Sample Code
 Declaring a class for enums.
 
 ```php
+/**
+ * Class Gender
+ * @package tests\EnumTest
+ *
+ * @method bool isMale
+ * @method bool isFemale
+ */
 class Gender extends Enum
 {
     const MALE   = 'M';
@@ -58,6 +65,8 @@ echo $someOneGender->show();    // 'Female'
 ```
 
 To check the value, use ```is``` method.
+The ```isMale``` and ```isFemale``` methods are
+ magic methods implemented by ```__call```. 
 
 ```php
 // checking the value
