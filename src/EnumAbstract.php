@@ -5,12 +5,8 @@ namespace WScore\Enum;
  * Class Enum
  * @package Sandbox\Enum
  *
- * most likely, this class is from the repository:
- * https://github.com/myclabs/php-enum
- *
- *
  */
-abstract class AbstractEnum implements EnumInterface
+abstract class EnumAbstract implements EnumInterface
 {
     /**
      * Enum value

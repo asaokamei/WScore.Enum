@@ -9,7 +9,7 @@ MIT License
 
 ### inspired by
 
-inspired (or copied idea) from:
+inspired by:
 [https://github.com/myclabs/php-enum](https://github.com/myclabs/php-enum)
 and
 [https://github.com/fre5h/DoctrineEnumBundle](https://github.com/fre5h/DoctrineEnumBundle).
